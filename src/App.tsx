@@ -9,7 +9,7 @@ import './styles/app.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className='navbar'>
         <Navbar />
       </div>
