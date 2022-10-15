@@ -7,7 +7,7 @@ export type GlobalStats = {
 	totalMarkets: number
 }
 
-export type Cryptos = {
+export type Crypto = {
 	'24hVolume': string,
 	btcPrice: string,
 	change: string,
