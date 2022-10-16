@@ -25,3 +25,31 @@ export type Crypto = {
 	tier: number
 	uuid: string
 }
+
+export type NewsFetch = {
+	value: NewsData[],
+	readLink: string,
+	sort: object[],
+}
+
+export type NewsData = {
+	category: string,
+	datePublished: string,
+	description: string,
+	image?: {
+		thumbnail?: {
+			contentUrl: string
+		}
+	},
+	name: string,
+	provider: {
+		name: string,
+		image?: {
+			thumbnail?: {
+				contentUrl: string
+			}
+		}
+	}[],
+	url: string,
+	_type: string
+}

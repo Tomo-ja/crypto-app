@@ -25,7 +25,7 @@ const Cryptocurrencies = ({simplified}: Props) => {
 
 	}, [cryptosList, searchTerm])
 
-	if (isFetching) return <div>Loading/...</div>
+	if (isFetching) return <div>Loading...</div>
 
 	return (
 		<>
