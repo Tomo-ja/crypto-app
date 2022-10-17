@@ -26,6 +26,56 @@ export type Crypto = {
 	uuid: string
 }
 
+export type CryptoDetail = {
+	'24hVolume': string,
+	allTimeHigh: {
+		price: string, 
+		timestamp: number
+	},
+	btcPrice: string,
+	change: string,
+	coinrankingUrl: string,
+	color: string,
+	description: string,
+	fullyDilutedMarketCap: string,
+	iconUrl: string,
+	links: {
+		name: string,
+		type: string,
+		url: string,
+	}[],
+	listedAt: number 
+	lowVolume: boolean
+	marketCap: string,
+	name: string,
+	numberOfExchanges: number,
+	numberOfMarkets: number
+	price: string
+	priceAt: number
+	rank: number
+	sparkline: string[],
+	supply: {
+		confirmed: boolean,
+		supplyAt: number,
+		max: string,
+		total: string,
+		circulating: string
+	},
+	symbol: string,
+	tags: string[],
+	tier: number,
+	uuid: string,
+	websiteUrl: string
+}
+
+export type CryptoHistory = {
+	change: string,
+	history: {
+		price: string,
+		timestamp: number
+	}[]
+}
+
 export type NewsFetch = {
 	value: NewsData[],
 	readLink: string,
