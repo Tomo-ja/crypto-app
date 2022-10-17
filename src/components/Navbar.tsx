@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 import type { MenuProps } from 'antd'
@@ -38,14 +38,41 @@ const menuItems: MenuProps['items'] = [
 
 
 const Navbar = () => {
+
+	const [activeMenu, setActionMenu] = useState(true)
+	const [screenSize, setScreenSize] = useState<null | number>(null)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setScreenSize(window.innerWidth)
+		}
+		window.addEventListener('resize', handleResize)
+		handleResize()
+
+		return () => window.removeEventListener('resize', handleResize)
+	}, [])
+
+	useEffect(() => {
+		if(!screenSize || screenSize < 1285){
+			setActionMenu(false)
+		} else {
+			setActionMenu(true)
+		}
+	}, [screenSize])
+
 	return (
 		<div className='nav-container'>
 			<div className='logo-container'>
 				<Typography.Title level={2} className='logo'>
 					<Link to='/'>Cryproverse</Link>
 				</Typography.Title>
+				<Button className='menu-control-container' onClick={() => setActionMenu(prev => !prev)}>
+					<MenuOutlined />
+				</Button>
 			</div>
-			<Menu theme='dark'items={menuItems} />
+			{ activeMenu && 
+				<Menu theme='dark'items={menuItems} />
+			}
 		</div>
 	)
 }
