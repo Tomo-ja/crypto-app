@@ -4,6 +4,7 @@ import { Col, Row, Typography } from "antd";
 import { CryptoHistory } from "../helper/typeList";
 import 'chart.js/auto'
 import moment from "moment";
+import Loader from "./Loader";
 
 
 const { Title } = Typography
@@ -20,7 +21,7 @@ const LineChart = ({coinHistory, currentPrice, coinName}: Props) => {
 	const coinTimestamp: any[] = []
 	const ref = useRef()
 
-	if (!coinHistory) return <div>Loading...</div>
+	if (!coinHistory) return <Loader/>
 
 	const history = coinHistory.data as CryptoHistory
 

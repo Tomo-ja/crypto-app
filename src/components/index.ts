@@ -1,14 +1,13 @@
 import Navbar  from './Navbar'
-import Footer from './Footer'
 import CryptoDetails from './CryptoDetails'
 import Cryptocurrencies from './Cryptocurrencies'
-import Exchanges from './Exchanges'
 import Homepage from './Homepage'
 import News from './News'
+import Loader from './Loader'
 
 
 
 
 
 
-export { Navbar,CryptoDetails, Cryptocurrencies, Exchanges, Homepage, News, Footer }
+export { Navbar,CryptoDetails, Cryptocurrencies, Homepage, News, Loader }

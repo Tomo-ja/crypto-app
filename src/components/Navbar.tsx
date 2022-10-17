@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import type { MenuProps } from 'antd'
 import { Button, Menu, Typography } from 'antd'
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons'
+import { HomeOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons'
 
 const menuItems: MenuProps['items'] = [
 	{
@@ -21,14 +21,7 @@ const menuItems: MenuProps['items'] = [
 		)
 	},
 	{
-		icon: <MoneyCollectOutlined />,
-		key: 'exchanges',
-		label: (
-			<Link to='/exchanges'>Exchanges</Link>
-			)
-	},
-	{
-		icon: <HomeOutlined />,
+		icon: <BulbOutlined />,
 		key: 'news',
 		label: (
 			<Link to='/news'>News</Link>
@@ -64,7 +57,7 @@ const Navbar = () => {
 		<div className='nav-container'>
 			<div className='logo-container'>
 				<Typography.Title level={2} className='logo'>
-					<Link to='/'>Cryproverse</Link>
+					<Link to='/'>Crypto Helper</Link>
 				</Typography.Title>
 				<Button className='menu-control-container' onClick={() => setActionMenu(prev => !prev)}>
 					<MenuOutlined />

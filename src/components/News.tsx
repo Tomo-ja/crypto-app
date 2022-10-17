@@ -7,6 +7,7 @@ import { Crypto, NewsData } from '../helper/typeList'
 
 import demoImage from '../images/newsDemo.jpg'
 import { useGetCryptosQuery } from '../services/cryptoApi'
+import Loader from './Loader'
 
 const { Text, Title } = Typography
 const { Option } = Select
@@ -21,7 +22,7 @@ const News = ({simplified}: Props) => {
 	const { data } = useGetCryptosQuery(100)
 
 
-	if( isFetching ) return <div>Loading...</div>
+	if( isFetching ) return <Loader />
 
 
 	return (

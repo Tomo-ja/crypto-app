@@ -5,6 +5,7 @@ import { Card, Row, Col, Input} from 'antd'
 
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import { Crypto } from '../helper/typeList'
+import Loader from './Loader'
 
 type Props = {
 	simplified: boolean
@@ -25,7 +26,7 @@ const Cryptocurrencies = ({simplified}: Props) => {
 
 	}, [cryptosList, searchTerm])
 
-	if (isFetching) return <div>Loading...</div>
+	if (isFetching) return <Loader />
 
 	return (
 		<>
