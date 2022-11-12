@@ -4,9 +4,8 @@
 
 This is Crypto Summary Website which is for prove my solid React.js skill and expand new skill such as Redux toolkit and Ant Design.
 
-Users can see Cryptocurrencies Statistics provided by [Coinranking]('https://rapidapi.com/Coinranking/api/coinranking1/') and related news provided by [Bing News Search]('https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/')
+Users can see Cryptocurrencies Statistics provided by [Coinranking](https://rapidapi.com/Coinranking/api/coinranking1/') and related news provided by [Bing News Search](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/)
 
-[Word api is here]('https://rapidapi.com/dpventures/api/wordsapi/')
 
 ## Motivation
 
@@ -16,7 +15,7 @@ Using Redux toolkit and Ant Design allowed me develop this application faster an
 
 ## Usage
 
-This application is available on [vercel]('https://crypto-app-zeta.vercel.app/')
+This application is available on [vercel](https://crypto-app-zeta.vercel.app/)
 
 or
 
